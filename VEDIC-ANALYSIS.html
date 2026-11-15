@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="A black, minimal Vedic reading: current phase, struggle, karmic relationship, growth, Venus and Sun periods, marriage, foreign life, children, and the verified chart behind it.">
+<title>The Chart, Read — Vedic Analysis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500;1,600&amp;display=swap" rel="stylesheet">
+<style>
+    :root {
+        --bg: #0f0f0f;
+        --surface: #151515;
+        --text: #d8d8d8;
+        --heading: #f2f2f2;
+        --muted: #8a8a8a;
+        --faint: #5f5f5f;
+        --rule: #262626;
+        --serif: "Times New Roman", Times, Georgia, serif;
+        --display: "Playfair Display", Georgia, "Times New Roman", serif;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    html {
+        background: var(--bg);
+        scroll-behavior: smooth;
+    }
+
+    body {
+        position: relative;
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--display);
+        font-size: 17.5px;
+        line-height: 1.8;
+        font-weight: 400;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        background-image:
+            radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.45) 0 1px, transparent 1.7px),
+            radial-gradient(circle at 68% 42%, rgba(255, 255, 255, 0.32) 0 1px, transparent 1.7px),
+            radial-gradient(circle at 38% 78%, rgba(255, 255, 255, 0.26) 0 1px, transparent 1.7px),
+            radial-gradient(circle at 84% 86%, rgba(255, 255, 255, 0.22) 0 1px, transparent 1.7px);
+        background-size: 520px 520px, 680px 680px, 840px 840px, 960px 960px;
+        opacity: 0.3;
+        animation: twinkle 16s ease-in-out infinite alternate;
+    }
+
+    ::selection {
+        background: var(--heading);
+        color: var(--bg);
+    }
+
+    .wrap {
+        position: relative;
+        z-index: 1;
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 88px 24px 120px;
+    }
+
+    .kicker {
+        margin: 0 0 28px;
+        font-family: var(--serif);
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--muted);
+    }
+
+    h1 {
+        margin: 0 0 20px;
+        font-family: var(--serif);
+        font-style: normal;
+        font-weight: 700;
+        font-size: clamp(2.3rem, 4.6vw, 3.5rem);
+        line-height: 1.03;
+        letter-spacing: -0.015em;
+        color: var(--heading);
+    }
+
+    .subtitle {
+        margin: 0 0 10px;
+        font-family: var(--display);
+        font-style: italic;
+        font-size: 15.5px;
+        color: var(--muted);
+    }
+
+    .meta {
+        margin: 0;
+        font-family: var(--serif);
+        font-size: 13px;
+        letter-spacing: 0.04em;
+        color: var(--faint);
+    }
+
+    .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+        gap: 44px;
+        align-items: center;
+    }
+
+    .hero-copy {
+        min-width: 0;
+    }
+
+    .hero-moon {
+        justify-self: end;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .moon-disc {
+        position: relative;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: radial-gradient(circle at 38% 32%, #e6e6e6, #9a9a9a 38%, #3a3a3a 72%, #101010 100%);
+        isolation: isolate;
+    }
+
+    .moon-disc::before {
+        content: "";
+        position: absolute;
+        inset: -12%;
+        z-index: -1;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.03) 45%, transparent 72%);
+        filter: blur(14px);
+    }
+
+    .moon-disc::after {
+        content: "";
+        position: absolute;
+        inset: -18px;
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+
+    .moon-disc img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        filter: grayscale(1) contrast(1.08) brightness(0.92);
+        animation: moon-drift 18s ease-in-out infinite alternate;
+    }
+
+    .moon-caption {
+        margin: 20px 0 0;
+        font-family: var(--serif);
+        font-size: 9px;
+        line-height: 1.7;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--faint);
+    }
+
+    .moon-phases {
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+        margin: 72px 0 0;
+    }
+
+    .phase {
+        position: relative;
+        width: 26px;
+        height: 26px;
+        overflow: hidden;
+        border-radius: 50%;
+        background-image: url("https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/1280px-FullMoon2010.jpg");
+        background-size: cover;
+        background-position: center;
+        filter: grayscale(1) brightness(0.9);
+        opacity: 0.62;
+    }
+
+    .phase::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: var(--bg);
+        transform: translateX(0);
+    }
+
+    .phase.crescent::after { transform: translateX(-15%); }
+    .phase.quarter::after { transform: translateX(-50%); }
+    .phase.gibbous::after { transform: translateX(-85%); }
+    .phase.full::after { display: none; }
+
+    .phase.current {
+        opacity: 1;
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.28);
+    }
+
+    .epigraph {
+        margin: 40px 0 0;
+        padding-left: 20px;
+        border-left: 1px solid var(--rule);
+        font-family: var(--display);
+        font-style: italic;
+        font-size: 1.35rem;
+        line-height: 1.5;
+        color: #bfbfbf;
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid var(--rule);
+        margin: 64px 0;
+    }
+
+    .note {
+        font-size: 14px;
+        line-height: 1.7;
+        color: var(--muted);
+        font-style: italic;
+    }
+
+    .toc {
+        margin-top: 44px;
+        padding: 28px 0;
+        border-top: 1px solid var(--rule);
+        border-bottom: 1px solid var(--rule);
+    }
+
+    .toc-title {
+        margin: 0 0 16px;
+        font-family: var(--serif);
+        font-size: 10px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--muted);
+    }
+
+    .toc ol {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .toc a {
+        display: flex;
+        gap: 14px;
+        padding: 7px 0;
+        font-family: var(--serif);
+        color: var(--text);
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    .toc a:hover {
+        color: #ffffff;
+    }
+
+    .toc .n {
+        flex: 0 0 26px;
+        width: 26px;
+        font-family: var(--display);
+        font-style: italic;
+        color: var(--faint);
+    }
+
+    .solar {
+        position: relative;
+        height: 340px;
+        margin: 56px 0 0;
+        overflow: hidden;
+        border-top: 1px solid var(--rule);
+        border-bottom: 1px solid var(--rule);
+        background: radial-gradient(circle at 50% 50%, rgba(242, 210, 138, 0.05), transparent 58%);
+    }
+
+    .sun {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 42px;
+        height: 42px;
+        margin: -21px 0 0 -21px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 36% 34%, #fff8e2, #f2d28a 42%, #c9973f 70%, #6b4a1a 100%);
+        box-shadow: 0 0 34px rgba(242, 210, 138, 0.4), 0 0 80px rgba(242, 210, 138, 0.16);
+    }
+
+    .sun::before {
+        content: "";
+        position: absolute;
+        inset: -34px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(242, 210, 138, 0.16), transparent 70%);
+        filter: blur(8px);
+    }
+
+    .orbit {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 50%;
+        animation: spin linear infinite;
+    }
+
+    .o1 { width: 120px; height: 120px; margin: -60px 0 0 -60px; animation-duration: 14s; animation-delay: -3s; }
+    .o2 { width: 180px; height: 180px; margin: -90px 0 0 -90px; animation-duration: 20s; animation-delay: -9s; }
+    .o3 { width: 250px; height: 250px; margin: -125px 0 0 -125px; animation-duration: 26s; animation-delay: -16s; }
+    .o4 { width: 330px; height: 330px; margin: -165px 0 0 -165px; animation-duration: 34s; animation-delay: -5s; }
+    .o5 { width: 430px; height: 430px; margin: -215px 0 0 -215px; animation-duration: 44s; animation-delay: -22s; }
+    .o6 { width: 540px; height: 540px; margin: -270px 0 0 -270px; animation-duration: 56s; animation-delay: -37s; }
+
+    .planet {
+        position: absolute;
+        top: 50%;
+        right: -4px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        transform: translateY(-50%);
+    }
+
+    .mercury { width: 5px; height: 5px; right: -2.5px; background: #9a9a9a; }
+    .venus { width: 8px; height: 8px; right: -4px; background: #d8c39a; }
+    .earth { width: 8px; height: 8px; right: -4px; background: #7f9bb3; }
+    .mars { width: 6px; height: 6px; right: -3px; background: #b06a4a; }
+    .jupiter { width: 13px; height: 13px; right: -6.5px; background: #c9b18a; }
+    .saturn { width: 10px; height: 10px; right: -5px; background: #d6c39a; }
+
+    .saturn i {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 24px;
+        height: 7px;
+        border: 1px solid rgba(214, 195, 154, 0.55);
+        border-radius: 50%;
+        transform: translate(-50%, -50%) rotate(-18deg);
+    }
+
+    .solar-caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 14px;
+        margin: 0;
+        font-family: var(--serif);
+        font-size: 9px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--faint);
+    }
+
+    section {
+        margin-top: 72px;
+        scroll-margin-top: 40px;
+    }
+
+    .section-head {
+        display: flex;
+        align-items: baseline;
+        gap: 14px;
+        margin-bottom: 18px;
+    }
+
+    .num {
+        font-family: var(--display);
+        font-style: italic;
+        font-size: 1.1rem;
+        color: var(--faint);
+    }
+
+    h2 {
+        margin: 0;
+        font-family: var(--serif);
+        font-size: 1.45rem;
+        font-weight: 700;
+        line-height: 1.25;
+        letter-spacing: -0.005em;
+        color: var(--heading);
+    }
+
+    h3 {
+        margin: 36px 0 8px;
+        font-family: var(--serif);
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--heading);
+    }
+
+    p {
+        margin: 0 0 20px;
+    }
+
+    strong {
+        font-family: var(--serif);
+        font-weight: 700;
+        color: #f0f0f0;
+    }
+
+    em {
+        font-style: italic;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+        text-decoration-color: #4a4a4a;
+    }
+
+    a:hover {
+        text-decoration-color: var(--heading);
+    }
+
+    a:focus-visible {
+        outline: 1px solid var(--heading);
+        outline-offset: 3px;
+    }
+
+    .conf {
+        display: inline-block;
+        margin: 0 0 22px;
+        padding: 3px 8px;
+        border: 1px solid var(--rule);
+        border-radius: 2px;
+        font-family: var(--serif);
+        font-size: 10px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+    }
+
+    .wrw {
+        margin: 30px 0;
+        padding: 4px 0 4px 22px;
+        border-left: 2px solid #3a3a3a;
+    }
+
+    .wrw p {
+        margin: 0 0 16px;
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .wrw p:last-child {
+        margin-bottom: 0;
+    }
+
+    .wrw .label {
+        display: block;
+        margin-bottom: 3px;
+        font-family: var(--serif);
+        font-size: 10px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--muted);
+    }
+
+    .pull {
+        margin: 48px 0;
+        padding: 24px 0;
+        border-top: 1px solid var(--rule);
+        border-bottom: 1px solid var(--rule);
+        font-family: var(--display);
+        font-style: italic;
+        font-weight: 400;
+        font-size: clamp(1.4rem, 3.4vw, 1.9rem);
+        line-height: 1.4;
+        color: #e8e8e8;
+    }
+
+    ul.clean {
+        margin: 0 0 20px;
+        padding: 0;
+        list-style: none;
+    }
+
+    ul.clean li {
+        position: relative;
+        margin-bottom: 10px;
+        padding-left: 22px;
+    }
+
+    ul.clean li::before {
+        content: "—";
+        position: absolute;
+        left: 0;
+        color: var(--faint);
+    }
+
+    .facts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 36px 0 0;
+        border-top: 1px solid var(--rule);
+    }
+
+    .facts > div {
+        padding: 14px 0;
+        border-bottom: 1px solid var(--rule);
+    }
+
+    .facts > div:nth-child(odd) {
+        padding-right: 18px;
+    }
+
+    .facts > div:nth-child(even) {
+        padding-left: 18px;
+        border-left: 1px solid var(--rule);
+    }
+
+    .facts dt {
+        margin-bottom: 4px;
+        font-family: var(--serif);
+        font-size: 10px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+    }
+
+    .facts dd {
+        margin: 0;
+        font-family: var(--serif);
+        font-size: 15px;
+        line-height: 1.5;
+        color: var(--text);
+    }
+
+    .table-wrap {
+        margin: 24px 0 32px;
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: var(--serif);
+        font-size: 14.5px;
+        line-height: 1.5;
+    }
+
+    caption {
+        caption-side: top;
+        padding-bottom: 10px;
+        font-family: var(--serif);
+        text-align: left;
+        font-size: 10px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+    }
+
+    th,
+    td {
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--rule);
+        text-align: left;
+        vertical-align: top;
+    }
+
+    th {
+        border-bottom-color: #333333;
+        font-family: var(--serif);
+        font-size: 10.5px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+    }
+
+    th.num,
+    td.num {
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+    }
+
+    tbody tr:last-child td {
+        border-bottom: 0;
+    }
+
+    .appendix {
+        margin-top: 96px;
+        padding-top: 48px;
+        border-top: 1px solid #333333;
+    }
+
+    .appendix .kicker {
+        margin-bottom: 16px;
+        color: var(--faint);
+    }
+
+    footer {
+        margin-top: 96px;
+        padding-top: 28px;
+        border-top: 1px solid var(--rule);
+        font-family: var(--serif);
+        font-size: 12.5px;
+        line-height: 1.7;
+        color: var(--faint);
+    }
+
+    footer p {
+        margin: 0 0 10px;
+    }
+
+    footer strong {
+        color: var(--muted);
+    }
+
+    @keyframes moon-drift {
+        from { transform: translateY(-4px); }
+        to { transform: translateY(4px); }
+    }
+
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+
+    @keyframes twinkle {
+        from { opacity: 0.22; }
+        to { opacity: 0.34; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .orbit,
+        .moon-disc img,
+        body::before {
+            animation: none;
+        }
+
+        html {
+            scroll-behavior: auto;
+        }
+    }
+
+    @media (max-width: 760px) {
+        .hero-grid {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .hero-moon {
+            justify-self: start;
+            max-width: 230px;
+        }
+
+        .moon-caption {
+            text-align: left;
+        }
+
+        .solar {
+            height: 300px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .wrap {
+            padding: 64px 20px 88px;
+        }
+
+        body {
+            font-size: 17px;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+        }
+
+        section {
+            margin-top: 56px;
+        }
+
+        .facts {
+            grid-template-columns: 1fr;
+        }
+
+        .facts > div:nth-child(odd),
+        .facts > div:nth-child(even) {
+            padding-right: 0;
+            padding-left: 0;
+            border-left: 0;
+        }
+
+        .moon-phases {
+            gap: 14px;
+            margin-top: 56px;
+        }
+
+        .phase {
+            width: 22px;
+            height: 22px;
+        }
+    }
+
+    @media print {
+        html,
+        body {
+            background: #ffffff;
+            color: #111111;
+        }
+
+        body {
+            font-family: var(--serif);
+        }
+
+        .wrap {
+            max-width: none;
+            padding: 0;
+        }
+
+        .hero-moon,
+        .solar,
+        .moon-phases,
+        body::before {
+            display: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        strong {
+            color: #000000;
+        }
+
+        .kicker,
+        .subtitle,
+        .meta,
+        .note,
+        .conf,
+        .num,
+        th,
+        caption,
+        footer {
+            color: #555555;
+        }
+
+        .wrw {
+            border-left-color: #999999;
+        }
+
+        .pull {
+            border-color: #cccccc;
+            color: #111111;
+        }
+
+        th,
+        td {
+            border-color: #cccccc;
+        }
+
+        a {
+            color: #111111;
+            text-decoration: none;
+        }
+    }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+    <div class="hero-grid">
+        <div class="hero-copy">
+            <p class="kicker">A Vedic Reading · 18 August 2002</p>
+            <h1>The Chart, Read</h1>
+            <p class="subtitle">Leo Ascendant · Moon in Mula · Venus in the second</p>
+            <p class="meta">06:30&nbsp;IST · Razole, Andhra Pradesh · 16.4743°&nbsp;N, 81.8402°&nbsp;E · Lahiri ayanamsa · whole-sign houses</p>
+            <p class="epigraph">A warm surface, a guarded centre, and a life that keeps asking you to move first.</p>
+        </div>
+        <div class="hero-moon" aria-hidden="true">
+            <div class="moon-disc">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/1280px-FullMoon2010.jpg" alt="" width="1280" height="1217" decoding="async" fetchpriority="high">
+            </div>
+            <p class="moon-caption">Moon in Sagittarius · Mula 2<br>Waxing gibbous · 77% illuminated</p>
+        </div>
+    </div>
+</header>
+
+<div class="solar" aria-hidden="true">
+    <div class="sun"></div>
+    <div class="orbit o1"><span class="planet mercury"></span></div>
+    <div class="orbit o2"><span class="planet venus"></span></div>
+    <div class="orbit o3"><span class="planet earth"></span></div>
+    <div class="orbit o4"><span class="planet mars"></span></div>
+    <div class="orbit o5"><span class="planet jupiter"></span></div>
+    <div class="orbit o6"><span class="planet saturn"><i></i></span></div>
+    <p class="solar-caption">The sky at 06:30 IST · 18 August 2002</p>
+</div>
+
+<nav class="toc" aria-label="Contents">
+    <p class="toc-title">Contents</p>
+    <ol>
+        <li><a href="#short"><span class="n">01</span>The short version</a></li>
+        <li><a href="#now"><span class="n">02</span>Where you are now</a></li>
+        <li><a href="#initiative"><span class="n">03</span>Why initiative is hard</a></li>
+        <li><a href="#self"><span class="n">04</span>Self-doubt and attractiveness</a></li>
+        <li><a href="#love"><span class="n">05</span>Love, karma, marriage</a></li>
+        <li><a href="#foreign"><span class="n">06</span>Foreign trips or stay</a></li>
+        <li><a href="#children"><span class="n">07</span>Children</a></li>
+        <li><a href="#sun"><span class="n">08</span>The Sun shift, 2027–2033</a></li>
+        <li><a href="#moon"><span class="n">09</span>The Moon</a></li>
+        <li><a href="#axis"><span class="n">10</span>Rahu and Ketu</a></li>
+        <li><a href="#growth"><span class="n">11</span>Growth, and the longer arc</a></li>
+        <li><a href="#timeline"><span class="n">12</span>The timeline</a></li>
+    </ol>
+</nav>
+
+<p class="note" style="margin-top: 28px;">Astrology here is a symbolic language, not a forecast. The positions are exact; the meanings are interpretive. Read the dates as windows and the confidence labels as honesty, not authority.</p>
+
+<main>
+
+<section id="short">
+    <div class="section-head">
+        <span class="num">01</span>
+        <h2>The short version</h2>
+    </div>
+    <p>You have a Leo Ascendant with the Sun in the first house in its own sign, a Sagittarius Moon in the fifth, and a Virgo Venus in the second. The first impression is warmth, presence, and a certain dignity. The inner weather is more private: a mind that measures, doubts, and waits.</p>
+    <p>That is the central tension of the chart. The first house wants to be seen. The second-house Venus wants to be valued. The twelfth-house Mars and Jupiter want to withdraw. You are visible and hidden at the same time, and much of your life is spent negotiating between those two facts.</p>
+    <p>The current period is Venus, running to <strong>22 August 2027</strong>. Venus is the lord of the third and tenth houses, placed in the second house in Virgo, its sign of debilitation, with only a partial Neecha Bhanga. This is the phase of comparison, self-worth, perfectionism, delayed recognition, and relationships that feel like tests. It is not a wasted phase. It is the phase in which the value system is being rebuilt from the inside.</p>
+    <p>The next period is the Sun, <strong>22 August 2027 to 22 August 2033</strong>. The Sun is the first lord in the first house in Leo, and in the D10 chart it sits in Leo in the tenth. This is the build phase: identity, authority, visibility, and a career that finally carries your name. The Sun is in Gandanta, so the shift may feel like a threshold rather than a switch.</p>
+    <p>Marriage, foreign life, and children all have real signatures in the chart. Each is slow, conditional, and better read as a direction than a date.</p>
+
+    <dl class="facts">
+        <div>
+            <dt>Ascendant</dt>
+            <dd>Leo 10°16′38″</dd>
+        </div>
+        <div>
+            <dt>Moon</dt>
+            <dd>Sagittarius 3°47′07″, Mula 2</dd>
+        </div>
+        <div>
+            <dt>Current period</dt>
+            <dd>Venus, to 22 Aug 2027</dd>
+        </div>
+        <div>
+            <dt>Next period</dt>
+            <dd>Sun, 22 Aug 2027 – 22 Aug 2033</dd>
+        </div>
+        <div>
+            <dt>Marriage signature</dt>
+            <dd>Saturn in the 11th; D9 Saturn exalted in the 4th</dd>
+        </div>
+        <div>
+            <dt>Foreign signature</dt>
+            <dd>Rahu in the 10th; 9th lord in the 12th</dd>
+        </div>
+    </dl>
+</section>
+
+<section id="now">
+    <div class="section-head">
+        <span class="num">02</span>
+        <h2>Where you are now — Venus, to 22 August 2027</h2>
+    </div>
+    <p class="conf">High confidence on the dates · medium confidence on the reading</p>
+    <p>Venus is the lord of the third and tenth houses, and it sits in the second house in Virgo, its sign of debilitation. The second house is family, speech, food, values, money, and self-worth. When Venus is there and weak, the whole question of “what am I worth?” becomes a daily practice.</p>
+    <p>The texture of this period is comparison. You notice what others have. You over-edit your work. You delay pleasure until the conditions are perfect. Relationships feel like auditions you are not sure you passed. Money and recognition feel slightly out of reach even when they are close. None of this is imaginary; it is the weather of a debilitated Venus in the second.</p>
+    <p>The cancellation is partial. Of the classical Neecha Bhanga conditions, only one is met: Mercury, Venus’s dispositor, is in a kendra — the first house. Venus is not in a kendra, it is not aspected by Mercury, and Jupiter, the lord of Venus’s exaltation sign, is in the twelfth. So the debilitation is softened, not removed. The lesson is not “you are not enough.” The lesson is “stop pricing yourself.”</p>
+
+    <div class="wrw">
+        <p><span class="label">What it feels like</span>A long stretch of almost. Almost recognised, almost settled, almost sure. The gap between where you are and where you think you should be.</p>
+        <p><span class="label">Why</span>Venus is debilitated in the second, the house of value. Saturn opposes the Moon within 1°09′, adding emotional restraint. Mars, the planet of initiative, is weak in the twelfth.</p>
+        <p><span class="label">When</span>Now until 22 August 2027. The final year is the wrap-up. The Sun period begins the next day.</p>
+    </div>
+
+    <p class="pull">The Venus phase is not asking you to be more desirable. It is asking you to stop pricing yourself.</p>
+
+    <p><strong>What helps.</strong> Finish small things. Say what you value before you explain why. Keep money and self-worth in separate rooms. Let a relationship be a meeting, not a verdict.</p>
+</section>
+
+<section id="initiative">
+    <div class="section-head">
+        <span class="num">03</span>
+        <h2>Why initiative is hard</h2>
+    </div>
+    <p class="conf">High confidence on the placement · medium confidence on the pattern</p>
+    <p>You hesitate to initiate in family and relationships. You wait to be invited. You over-plan. You convince yourself the timing is wrong, and then the moment passes. The chart does not call this a character flaw. It calls it a Mars problem, and it is specific.</p>
+    <p>Mars is the karaka for initiative, courage, and the first move. In this chart Mars is in Cancer, its sign of debilitation, in the twelfth house. It is combust, about 2°18′ from the Sun. It is 44′ from its deepest debilitation point at 28° Cancer. And it sits inside the Cancer–Leo Gandanta, the knot between water and fire. That is five kinds of weakness in one planet.</p>
+    <p>Because Mars also rules the fourth and ninth houses, family and fortune are wired to this weak Mars. Saturn, the seventh lord, sits in the eleventh and casts a tight opposition to the Moon — the mind — at 1°09′. Ketu in the fourth detaches from home. The Sun in Gandanta makes identity itself feel like a threshold. The result is a person who can act beautifully when the path is clear, and freeze when the first step is social.</p>
+
+    <div class="wrw">
+        <p><span class="label">What it feels like</span>You know what you want, but the move feels expensive. You wait for certainty. You replay the conversation afterwards.</p>
+        <p><span class="label">Why</span>Mars is debilitated, combust, in the twelfth, near deep debilitation, and in Gandanta. Saturn opposes the Moon. Ketu sits in the fourth.</p>
+        <p><span class="label">When</span>Mars’s own period is late (2043–2050), so the chart does not hand you an early “just act” window. The Sun period (2027–2033) builds structural courage. The Sun/Mars antardasha (June–October 2028) is the cleanest action window.</p>
+    </div>
+
+    <p><strong>What helps.</strong> Borrow Mars instead of waiting for it. One small initiative a week. State a preference before you explain it. Make the first move small enough that it cannot be called a failure. Ask for the meeting; do not wait to be chosen for it.</p>
+</section>
+
+<section id="self">
+    <div class="section-head">
+        <span class="num">04</span>
+        <h2>Self-doubt and attractiveness</h2>
+    </div>
+    <p class="conf">Medium confidence</p>
+    <p>People see presence. Leo Ascendant, the Sun in the first house in its own sign, a certain warmth of bearing. Venus in the second adds charm to the face, the voice, and the manner. The Moon in the fifth adds playfulness. The outside is genuinely attractive; this is not a chart that hides its light.</p>
+    <p>The inside is more critical. Venus is debilitated, so the mirror is never quite satisfied. Saturn opposes the Moon at 1°09′, so the mind turns self-reflection into self-audit. The Sun is in Gandanta, so identity feels unfinished even when it is working. You are not imagining the gap between how you are seen and how you feel. The gap is the chart’s theme.</p>
+    <p>The work is not to become more attractive. It is to let being seen feel safe. The Leo first house does not need a better performance; it needs a quieter audience inside your own head.</p>
+
+    <div class="wrw">
+        <p><span class="label">What it feels like</span>Compliments land as data, not as comfort. You can hold a room and still wonder whether you belong in it.</p>
+        <p><span class="label">Why</span>Strong first-house Sun and Leo Ascendant; debilitated second-house Venus; Saturn–Moon opposition; Sun in Gandanta.</p>
+        <p><span class="label">When</span>The self-image softens as the Venus period matures, and more visibly in the Sun period, when identity stops being borrowed.</p>
+    </div>
+</section>
+
+<section id="love">
+    <div class="section-head">
+        <span class="num">05</span>
+        <h2>Love, karma, marriage</h2>
+    </div>
+    <p class="conf">Medium confidence on the direction · low confidence on any exact date</p>
+    <p>The seventh house is Aquarius, ruled by Saturn, and Saturn sits in the eleventh house of networks, friends, and gains. Venus, the karaka for love, is debilitated in the second. The seventh from the Moon is Gemini, again Saturn. The seventh from Venus is Pisces, where Jupiter sits in the twelfth. This is not a hot, immediate romance chart. It is a slow, structured, mature chart, and the relationship is often mediated by a network: friends, community, family, work.</p>
+
+    <h3>The signature</h3>
+    <p>Saturn as the seventh lord, in the eleventh, describes a partner who is mature, perhaps older in outlook, and connected to your social or professional world. The tight Saturn–Moon opposition means the mind approaches intimacy with caution. The debilitated Venus in the second means love is tangled with values, family, and self-worth. The D9 chart adds the deeper layer: Saturn is exalted in Libra in the fourth, so domestic stability comes after Saturn has done its work; Venus is in the twelfth, so love has a private, foreign, or letting-go dimension; Rahu is on the D9 Ascendant, so the partner may feel “other” — a different background, culture, or country.</p>
+    <p>This is why the “love-cum-arranged” pattern is plausible. The seventh lord in the eleventh points to the friend network. Venus in the second points to family and values. Saturn points to maturity and structure. The chart is not romantic about romance; it is serious about partnership.</p>
+
+    <h3>The karmic layer</h3>
+    <p>The fourth–tenth Rahu–Ketu axis is the chart’s main karmic line: home versus career, roots versus horizon. Saturn rules the seventh and also shapes the Moon’s seventh. The relationship is not here to rescue you. It is here to make you grow up in a particular direction — towards commitment, structure, and a home that is chosen rather than inherited.</p>
+
+    <div class="wrw">
+        <p><span class="label">What it feels like</span>You want closeness, but you test it. You wait for the other person to prove something. You mistake caution for discernment.</p>
+        <p><span class="label">Why</span>Saturn is the seventh lord in the eleventh; Saturn opposes the Moon at 1°09′; Venus is debilitated in the second; D9 Venus is in the twelfth and D9 Rahu is on the Ascendant.</p>
+        <p><span class="label">When</span>Venus keeps things ambiguous until 22 August 2027. The Sun period (2027–2033) is the commitment window. Sun/Moon (December 2027–June 2028) opens the emotional door; Sun/Mars (June–October 2028) is the action window; Sun/Rahu (October 2028–September 2029) is the “other/foreign” window; Sun/Jupiter (September 2029–June 2030) is the blessing window.</p>
+    </div>
+
+    <p class="note">No chart can promise a marriage. This is a pattern, not a schedule. The dates are windows, not verdicts.</p>
+</section>
+
+<section id="foreign">
+    <div class="section-head">
+        <span class="num">06</span>
+        <h2>Foreign trips or stay</h2>
+    </div>
+    <p class="conf">Medium confidence on the pull · low confidence on the form</p>
+    <p>There is a real pull outward. Rahu sits in the tenth house in Taurus, so career and public life point away from the familiar. The ninth lord, Mars, is in the twelfth house of long distances, foreign places, and withdrawal. The twelfth house itself holds Mars and an exalted Jupiter. In the D9 chart, Venus is in the twelfth and Rahu is on the Ascendant. In the D10 chart, the Sun is in Leo in the tenth.</p>
+    <p>This is a foreign signature, but it is not a one-way ticket. The twelfth house is where you go to dissolve and rebuild; it can be a country, a cause, a practice, or a long retreat. The chart is more interested in the movement than in the passport.</p>
+
+    <div class="wrw">
+        <p><span class="label">What it feels like</span>Home is never quite the whole story. You are drawn to places and people that make the familiar feel provincial.</p>
+        <p><span class="label">Why</span>Rahu in the tenth; ninth lord in the twelfth; Mars and Jupiter in the twelfth; D9 Venus in the twelfth; D9 Rahu on the Ascendant.</p>
+        <p><span class="label">When</span>The Sun period (2027–2033) is the most likely activation. Sun/Rahu (October 2028–September 2029) is the sharpest window. Rahu’s own period (2050–2068) is the long expansion, but it is late.</p>
+    </div>
+
+    <p class="note">Treat foreign life as an experiment, not an escape. The chart supports the move; it does not promise that the move solves anything.</p>
+</section>
+
+<section id="children">
+    <div class="section-head">
+        <span class="num">07</span>
+        <h2>Children</h2>
+    </div>
+    <p class="conf">Low to medium confidence · symbolic, not a fertility assessment</p>
+    <p>The fifth house is Sagittarius with the Moon in it. The fifth lord, Jupiter, is exalted but placed in the twelfth. The D7 chart, which is the traditional children chart, has a Libra Ascendant: Jupiter and Rahu in Pisces in the sixth, Saturn and Venus in Gemini in the ninth, Mars in Cancer in the tenth.</p>
+    <p>The signature is mixed. The fifth house is not empty, so the theme is alive. But the fifth lord in the twelfth suggests delay, distance, or a non-standard route. D7 Jupiter, the putrakaraka, in the sixth adds effort, service, or a medical/administrative dimension. D7 Saturn and Venus in the ninth are a support: the ninth is the house of fortune and dharma, and Saturn there can mean late but stable.</p>
+
+    <div class="wrw">
+        <p><span class="label">What it feels like</span>The topic is not simple. It may arrive later than expected, or through a route you did not plan.</p>
+        <p><span class="label">Why</span>Fifth lord Jupiter in the twelfth; D7 Jupiter and Rahu in the sixth; D7 Saturn and Venus in the ninth; Moon in the fifth.</p>
+        <p><span class="label">When</span>The Moon period (2033–2043) is the emotional and creative decade, and the most natural child-related window. The Sun period can bring the structural decision.</p>
+    </div>
+
+    <p class="note">This is one area where the chart should not be treated as a verdict. Use it as a prompt for a real conversation with a doctor, not as a prediction.</p>
+</section>
+
+<section id="sun">
+    <div class="section-head">
+        <span class="num">08</span>
+        <h2>The Sun shift, 2027–2033</h2>
+    </div>
+    <p class="conf">High confidence on the dates · medium confidence on the outcome</p>
+    <p>The Sun period begins on <strong>22 August 2027</strong>. The Sun is the first lord in the first house in Leo, its own sign. In the D10 chart, the Sun is in Leo in the tenth. This is the identity-and-authority phase: the period in which the self stops being a question and becomes a body of work.</p>
+    <p>The Sun is in Gandanta, so the beginning may feel like a threshold. Do not expect a clean switch. Expect a knot that loosens. The Sun is also the natural karaka for the father, authority, visibility, and the spine of the self. The period rewards visible, patient, self-authored effort. It is not a period for borrowing an identity from a job, a relationship, or a family script.</p>
+
+    <div class="wrw">
+        <p><span class="label">What it feels like</span>A slow increase in authority. You are asked to stand in front of your own life.</p>
+        <p><span class="label">Why</span>First lord in the first in Leo; D10 Sun in the tenth; Sun in Gandanta.</p>
+        <p><span class="label">When</span>Sun/Sun to December 2027; Sun/Moon to June 2028; Sun/Mars to October 2028; Sun/Rahu to September 2029; Sun/Jupiter to June 2030; Sun/Saturn to June 2031; then Mercury, Ketu, and Venus close the period on 22 August 2033.</p>
+    </div>
+
+    <p class="pull">The Sun period is where the chart stops asking who you are and starts asking what you will build.</p>
+</section>
+
+<section id="moon">
+    <div class="section-head">
+        <span class="num">09</span>
+        <h2>The Moon — mind, home, mother</h2>
+    </div>
+    <p class="conf">Medium confidence</p>
+    <p>The Moon is in Sagittarius in the fifth house, in Mula pada 2, ruled by Ketu. This is a mind that needs meaning more than comfort. It is philosophical, searching, and allergic to a life that feels small. Mula is the root nakshatra: you dig for the thing underneath the thing. The fifth house adds romance, creativity, children, and play to the emotional life.</p>
+    <p>Saturn opposes the Moon at 1°09′, so the mind is disciplined but self-critical. Feelings are audited before they are allowed. You may withhold emotion until it can be justified, which is another way of saying you do not trust the feeling on its own. This is the source of much of the self-doubt, and of the difficulty in letting a relationship be simple.</p>
+    <p>The Moon is also the twelfth lord placed in the fifth. Emotion can be private, imaginative, and occasionally escapist; creativity is one of the ways you process what cannot be said directly. The fourth house, which holds Ketu, adds a sense that home is temporary or emotionally complicated. The chart’s symbolism around the mother is strong but not simple: the Moon is the mother, and the Moon is under Saturn’s tight gaze.</p>
+    <div class="wrw">
+        <p><span class="label">What it feels like</span>The heart wants proof before it commits. You can be warm and still hold something back.</p>
+        <p><span class="label">Why</span>Moon in Sagittarius, Mula 2, in the fifth; Saturn opposite at 1°09′; Ketu in the fourth; Moon as the twelfth lord.</p>
+        <p><span class="label">When</span>The Moon period runs from 2033 to 2043, after the Sun has done its work. The Saturn–Moon opposition is lifelong, but its lesson becomes explicit in that decade.</p>
+    </div>
+    <p><strong>What helps.</strong> Name the feeling before you solve it. Give the mind a practice — writing, meditation, a craft. Separate intuition from anxiety; they can feel identical when Saturn is close.</p>
+</section>
+
+<section id="axis">
+    <div class="section-head">
+        <span class="num">10</span>
+        <h2>Rahu and Ketu — the 4th–10th axis</h2>
+    </div>
+    <p class="conf">Medium confidence</p>
+    <p>Rahu is in Taurus in the tenth house; Ketu is in Scorpio in the fourth. This is the chart’s main karmic axis: home versus career, roots versus horizon. Rahu in the tenth hungers for a public life, a visible role, and a world larger than the one you were given. Ketu in the fourth detaches from the past and from the idea that home is a fixed place.</p>
+    <p>Taurus Rahu wants stability, beauty, resources, and something tangible to show for the effort. Scorpio Ketu is detached from emotional intensity, inherited patterns, and the need to control the inner world. The axis is not a curse; it is a direction of growth. You are here to build a public life that is not only ambition, and to make peace with the fact that home is something you choose.</p>
+    <p>In the D9 chart, Rahu sits on the Ascendant. That is a strong statement: the “other” is part of your identity. Foreignness, ambiguity, reinvention, and a certain hunger to be someone new are not accidents in this chart. They are the edge you are working with.</p>
+    <div class="wrw">
+        <p><span class="label">What it feels like</span>You are never fully satisfied by the familiar. The next country, the next role, the next version of yourself keeps calling.</p>
+        <p><span class="label">Why</span>Rahu in the tenth in Taurus; Ketu in the fourth in Scorpio; D9 Rahu on the Ascendant; the tenth-house Rahu is also a foreign-career signature.</p>
+        <p><span class="label">When</span>The axis is present in every career-and-home decision. The Sun period (2027–2033) activates the tenth-house Rahu; Sun/Rahu (October 2028–September 2029) is the sharpest window. Rahu’s own period is 2050–2068.</p>
+    </div>
+    <p class="note">Rahu is not a promise of fame or foreign settlement; it is a hunger. Ketu is not a promise of renunciation; it is a detachment. Read them as directions, not guarantees.</p>
+</section>
+
+<section id="growth">
+    <div class="section-head">
+        <span class="num">11</span>
+        <h2>Growth, and the longer arc</h2>
+    </div>
+    <p>The planetary sequence of the life is Venus, Sun, Moon, Mars, Rahu, Jupiter, Saturn, Mercury. Read as a curriculum, it is unusually clear: value, identity, feeling, action, expansion, meaning, maturity, integration. Each period asks a different question, and each one builds on the last.</p>
+    <p>The chart’s request is not to become someone else. It is to stop apologising for the person who is already here. That means valuing what you already have (Venus), building something with your name on it (Sun), feeling without auditing the feeling (Moon), taking the first move (Mars), letting the horizon widen (Rahu), asking what it all means (Jupiter), accepting structure and limits (Saturn), and integrating the whole thing (Mercury).</p>
+
+    <ul class="clean">
+        <li>One initiative a week, especially in family and relationship.</li>
+        <li>Keep money and self-worth in separate rooms.</li>
+        <li>Let marriage be a grown-up partnership, not a rescue.</li>
+        <li>Treat foreign life as an experiment, not an escape.</li>
+        <li>Let children be a conversation, not a test.</li>
+        <li>Build a body of work, not a persona.</li>
+    </ul>
+
+    <p class="pull">The chart does not ask you to become someone else. It asks you to stop apologising for the person who is already here.</p>
+</section>
+
+<section id="timeline">
+    <div class="section-head">
+        <span class="num">12</span>
+        <h2>The timeline</h2>
+    </div>
+    <p>The dates below come from the verified Vimshottari calculation. They are windows, not appointments.</p>
+
+    <div class="table-wrap">
+        <table>
+            <caption>Vimshottari periods</caption>
+            <thead>
+                <tr>
+                    <th>Period</th>
+                    <th>Window</th>
+                    <th>Theme</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Venus</strong></td><td>to 22 Aug 2027</td><td>value, self-worth, ambiguity</td></tr>
+                <tr><td>Sun / Sun</td><td>22 Aug – Dec 2027</td><td>identity reset</td></tr>
+                <tr><td>Sun / Moon</td><td>Dec 2027 – Jun 2028</td><td>emotional opening</td></tr>
+                <tr><td>Sun / Mars</td><td>Jun – Oct 2028</td><td>first moves</td></tr>
+                <tr><td>Sun / Rahu</td><td>Oct 2028 – Sep 2029</td><td>foreign, ambition</td></tr>
+                <tr><td>Sun / Jupiter</td><td>Sep 2029 – Jun 2030</td><td>expansion, blessing</td></tr>
+                <tr><td>Sun / Saturn</td><td>Jun 2030 – Jun 2031</td><td>structure, test</td></tr>
+                <tr><td>Sun (close)</td><td>to 22 Aug 2033</td><td>establishment</td></tr>
+                <tr><td><strong>Moon</strong></td><td>2033 – 2043</td><td>feeling, home, creativity, children</td></tr>
+                <tr><td><strong>Mars</strong></td><td>2043 – 2050</td><td>effort, property, relocation</td></tr>
+                <tr><td><strong>Rahu</strong></td><td>2050 – 2068</td><td>expansion, foreign, public life</td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+</main>
+
+<section class="appendix" id="reliable">
+    <p class="kicker">Appendix A</p>
+    <div class="section-head">
+        <span class="num">A</span>
+        <h2>Why this reading is reliable</h2>
+    </div>
+    <p>The chart behind this reading was independently verified. The D1 positions match the Swiss Ephemeris to the arcsecond, the divisional charts reproduce, and the Vimshottari dates follow from the same calculation. What follows is the short version; the tables are in Appendix B.</p>
+
+    <h3>What was checked</h3>
+    <ul class="clean">
+        <li><strong>D1:</strong> Ascendant 130°16′38″; Sun 121°02′46″; Moon 243°47′07″; Mercury 144°33′05″; Venus 166°57′57″; Mars 118°44′50″; Jupiter 99°40′42″; Saturn 62°38′07″; Rahu 50°20′22″. All match the report.</li>
+        <li><strong>Divisional charts:</strong> D9, D10, D7, and D12 all reproduce, including the report’s specific claims — D9 Saturn in Libra in the fourth, D9 Sun in Aries in the tenth, D10 Sun in Leo in the tenth.</li>
+        <li><strong>Dasha:</strong> Venus ends 22 August 2027; the Sun ends 22 August 2033. The report’s printed ayanamsa of 23°53′38″ would move Venus to 23 August; Steer’s 24 August would need about 23°53′55″. The 22 August date is the self-consistent one.</li>
+    </ul>
+
+    <h3>What is not certain</h3>
+    <ul class="clean">
+        <li><strong>The printed ayanamsa is 16″ too large.</strong> The actual Lahiri value is 23°53′22″. The positions still match, which is why the report reads as Swiss-derived.</li>
+        <li><strong>The houses are whole-sign.</strong> In Placidus, the Sun moves from the first to the twelfth, Saturn from the eleventh to the tenth, and Jupiter from the twelfth to the eleventh. The reading is whole-sign throughout.</li>
+        <li><strong>The D9 boundary is close.</strong> The D9 Ascendant changes from Gemini to Cancer at 06:28:49 IST — 71 seconds before the birth time. A slightly earlier birth would change the D9 layer. A later birth keeps Cancer for about fourteen more minutes.</li>
+        <li><strong>The meanings are symbolic.</strong> The positions are data. The interpretations are a reading, not a measurement.</li>
+    </ul>
+
+    <div class="wrw">
+        <p><span class="label">High confidence</span>Chart facts: positions, signs, houses, nakshatras, dasha dates.</p>
+        <p><span class="label">Medium confidence</span>Classical interpretations with a strong textual basis: Saturn as the seventh lord, Mars as the karaka for initiative, Rahu in the tenth as a foreign signature.</p>
+        <p><span class="label">Low confidence</span>Areas where the chart is mixed or the outcome depends on choices: the exact form of marriage, the timing of children, the shape of foreign life.</p>
+    </div>
+</section>
+
+<section class="appendix" id="tables">
+    <p class="kicker">Appendix B</p>
+    <div class="section-head">
+        <span class="num">B</span>
+        <h2>The tables</h2>
+    </div>
+
+    <h3>D1 — sidereal positions</h3>
+    <div class="table-wrap">
+        <table>
+            <caption>Lahiri ayanamsa · whole-sign houses</caption>
+            <thead>
+                <tr>
+                    <th>Body</th>
+                    <th class="num">Longitude</th>
+                    <th>Sign · degree</th>
+                    <th class="num">House</th>
+                    <th>Nakshatra · pada</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Ascendant</td><td class="num">130°16′38″</td><td>Leo 10°16′38″</td><td class="num">1</td><td>—</td></tr>
+                <tr><td>Sun</td><td class="num">121°02′46″</td><td>Leo 1°02′46″</td><td class="num">1</td><td>Magha 1</td></tr>
+                <tr><td>Moon</td><td class="num">243°47′07″</td><td>Sagittarius 3°47′07″</td><td class="num">5</td><td>Mula 2</td></tr>
+                <tr><td>Mercury</td><td class="num">144°33′05″</td><td>Leo 24°33′05″</td><td class="num">1</td><td>Purva Phalguni 4</td></tr>
+                <tr><td>Venus</td><td class="num">166°57′57″</td><td>Virgo 16°57′57″</td><td class="num">2</td><td>Hasta 3</td></tr>
+                <tr><td>Mars</td><td class="num">118°44′50″</td><td>Cancer 28°44′50″</td><td class="num">12</td><td>Ashlesha 4</td></tr>
+                <tr><td>Jupiter</td><td class="num">99°40′42″</td><td>Cancer 9°40′42″</td><td class="num">12</td><td>Pushya 2</td></tr>
+                <tr><td>Saturn</td><td class="num">62°38′07″</td><td>Gemini 2°38′07″</td><td class="num">11</td><td>Mrigashira 3</td></tr>
+                <tr><td>Rahu</td><td class="num">50°20′22″</td><td>Taurus 20°20′22″</td><td class="num">10</td><td>Rohini 4</td></tr>
+                <tr><td>Ketu</td><td class="num">230°20′22″</td><td>Scorpio 20°20′22″</td><td class="num">4</td><td>Jyeshtha 2</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Report vs Swiss Ephemeris</h3>
+    <div class="table-wrap">
+        <table>
+            <caption>Difference in arcseconds</caption>
+            <thead>
+                <tr>
+                    <th>Body</th>
+                    <th class="num">Report</th>
+                    <th class="num">Swiss</th>
+                    <th class="num">Δ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Ascendant</td><td class="num">130°16′38″</td><td class="num">130°16′38″</td><td class="num">0″</td></tr>
+                <tr><td>Sun</td><td class="num">121°02′46″</td><td class="num">121°02′46″</td><td class="num">0″</td></tr>
+                <tr><td>Moon</td><td class="num">243°47′07″</td><td class="num">243°47′07″</td><td class="num">0″</td></tr>
+                <tr><td>Mercury</td><td class="num">144°33′05″</td><td class="num">144°33′05″</td><td class="num">0″</td></tr>
+                <tr><td>Venus</td><td class="num">166°57′57″</td><td class="num">166°57′57″</td><td class="num">0″</td></tr>
+                <tr><td>Mars</td><td class="num">118°44′50″</td><td class="num">118°44′50″</td><td class="num">0″</td></tr>
+                <tr><td>Jupiter</td><td class="num">99°40′42″</td><td class="num">99°40′42″</td><td class="num">0″</td></tr>
+                <tr><td>Saturn</td><td class="num">62°38′07″</td><td class="num">62°38′07″</td><td class="num">0″</td></tr>
+                <tr><td>Rahu</td><td class="num">50°20′22″</td><td class="num">50°20′22″</td><td class="num">0″</td></tr>
+                <tr><td>Ketu</td><td class="num">230°20′22″</td><td class="num">230°20′22″</td><td class="num">0″</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Whole-sign vs Placidus</h3>
+    <div class="table-wrap">
+        <table>
+            <caption>House flip when the frame changes</caption>
+            <thead>
+                <tr>
+                    <th>Body</th>
+                    <th>Whole-sign</th>
+                    <th>Placidus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Sun</td><td>1st</td><td>12th</td></tr>
+                <tr><td>Saturn</td><td>11th</td><td>10th</td></tr>
+                <tr><td>Jupiter</td><td>12th</td><td>11th</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>D9 — navamsa</h3>
+    <div class="table-wrap">
+        <table>
+            <caption>Navamsa · Ascendant Cancer</caption>
+            <thead>
+                <tr>
+                    <th>Body</th>
+                    <th>Sign</th>
+                    <th class="num">House</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Ascendant</td><td>Cancer</td><td class="num">1</td></tr>
+                <tr><td>Sun</td><td>Aries</td><td class="num">10</td></tr>
+                <tr><td>Moon</td><td>Taurus</td><td class="num">11</td></tr>
+                <tr><td>Mercury</td><td>Scorpio</td><td class="num">5</td></tr>
+                <tr><td>Venus</td><td>Gemini</td><td class="num">12</td></tr>
+                <tr><td>Mars</td><td>Pisces</td><td class="num">9</td></tr>
+                <tr><td>Jupiter</td><td>Virgo</td><td class="num">3</td></tr>
+                <tr><td>Saturn</td><td>Libra</td><td class="num">4</td></tr>
+                <tr><td>Rahu</td><td>Cancer</td><td class="num">1</td></tr>
+                <tr><td>Ketu</td><td>Capricorn</td><td class="num">7</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>D10 — dasamsa</h3>
+    <div class="table-wrap">
+        <table>
+            <caption>Dasamsa · Ascendant Scorpio</caption>
+            <thead>
+                <tr>
+                    <th>Body</th>
+                    <th>Sign</th>
+                    <th class="num">House</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Ascendant</td><td>Scorpio</td><td class="num">1</td></tr>
+                <tr><td>Sun</td><td>Leo</td><td class="num">10</td></tr>
+                <tr><td>Moon</td><td>Capricorn</td><td class="num">3</td></tr>
+                <tr><td>Mercury</td><td>Aries</td><td class="num">6</td></tr>
+                <tr><td>Venus</td><td>Libra</td><td class="num">12</td></tr>
+                <tr><td>Mars</td><td>Sagittarius</td><td class="num">2</td></tr>
+                <tr><td>Jupiter</td><td>Gemini</td><td class="num">8</td></tr>
+                <tr><td>Saturn</td><td>Gemini</td><td class="num">8</td></tr>
+                <tr><td>Rahu</td><td>Cancer</td><td class="num">9</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>D7 — saptamsa</h3>
+    <div class="table-wrap">
+        <table>
+            <caption>Saptamsa · Ascendant Libra</caption>
+            <thead>
+                <tr>
+                    <th>Body</th>
+                    <th>Sign</th>
+                    <th class="num">House</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Ascendant</td><td>Libra</td><td class="num">1</td></tr>
+                <tr><td>Sun</td><td>Leo</td><td class="num">11</td></tr>
+                <tr><td>Moon</td><td>Sagittarius</td><td class="num">3</td></tr>
+                <tr><td>Mercury</td><td>Capricorn</td><td class="num">4</td></tr>
+                <tr><td>Venus</td><td>Gemini</td><td class="num">9</td></tr>
+                <tr><td>Mars</td><td>Cancer</td><td class="num">10</td></tr>
+                <tr><td>Jupiter</td><td>Pisces</td><td class="num">6</td></tr>
+                <tr><td>Saturn</td><td>Gemini</td><td class="num">9</td></tr>
+                <tr><td>Rahu</td><td>Pisces</td><td class="num">6</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>D12 — dwadasamsa</h3>
+    <p>Ascendant Sagittarius; Sun in Leo in the ninth, in its own sign.</p>
+
+    <h3>Vimshottari dasha</h3>
+    <div class="table-wrap">
+        <table>
+            <caption>Mahadasha end dates</caption>
+            <thead>
+                <tr>
+                    <th>Mahadasha</th>
+                    <th>Ends</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Ketu</td><td>22 Aug 2007</td></tr>
+                <tr><td>Venus</td><td>22 Aug 2027</td></tr>
+                <tr><td>Sun</td><td>22 Aug 2033</td></tr>
+                <tr><td>Moon</td><td>22 Aug 2043</td></tr>
+                <tr><td>Mars</td><td>22 Aug 2050</td></tr>
+                <tr><td>Rahu</td><td>22 Aug 2068</td></tr>
+                <tr><td>Jupiter</td><td>22 Aug 2084</td></tr>
+                <tr><td>Saturn</td><td>22 Aug 2103</td></tr>
+                <tr><td>Mercury</td><td>22 Aug 2120</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="table-wrap">
+        <table>
+            <caption>Sun mahadasha — antardasha end dates</caption>
+            <thead>
+                <tr>
+                    <th>Antardasha</th>
+                    <th>Ends</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Sun / Sun</td><td>Dec 2027</td></tr>
+                <tr><td>Sun / Moon</td><td>Jun 2028</td></tr>
+                <tr><td>Sun / Mars</td><td>Oct 2028</td></tr>
+                <tr><td>Sun / Rahu</td><td>Sep 2029</td></tr>
+                <tr><td>Sun / Jupiter</td><td>Jun 2030</td></tr>
+                <tr><td>Sun / Saturn</td><td>Jun 2031</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Aspects</h3>
+    <div class="table-wrap">
+        <table>
+            <caption>Whole-sign aspects · signs aspected</caption>
+            <thead>
+                <tr>
+                    <th>Body</th>
+                    <th>Sign</th>
+                    <th>Aspects</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Sun</td><td>Leo</td><td>Aquarius</td></tr>
+                <tr><td>Moon</td><td>Sagittarius</td><td>Gemini</td></tr>
+                <tr><td>Mars</td><td>Cancer</td><td>Libra, Capricorn, Aquarius</td></tr>
+                <tr><td>Mercury</td><td>Leo</td><td>Aquarius</td></tr>
+                <tr><td>Jupiter</td><td>Cancer</td><td>Libra, Sagittarius, Aquarius</td></tr>
+                <tr><td>Venus</td><td>Virgo</td><td>Pisces</td></tr>
+                <tr><td>Saturn</td><td>Gemini</td><td>Leo, Sagittarius, Pisces</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="note">Saturn’s seventh aspect falls at Sagittarius 2°38′, only 1°09′ from the Moon at Sagittarius 3°47′. Rahu and Ketu aspects are disputed in the classical texts and are not used here.</p>
+
+    <h3>Neecha Bhanga — Venus</h3>
+    <div class="table-wrap">
+        <table>
+            <caption>Classical cancellation conditions</caption>
+            <thead>
+                <tr>
+                    <th>Condition</th>
+                    <th>Met?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Dispositor in a kendra</td><td>Yes — Mercury in Leo, 1st</td></tr>
+                <tr><td>Venus aspected by Mercury</td><td>No</td></tr>
+                <tr><td>Venus in a kendra</td><td>No — Virgo, 2nd</td></tr>
+                <tr><td>Lord of exaltation sign in a kendra</td><td>No — Jupiter in the 12th</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="note">Only one of the four conditions is met, so the cancellation is partial. The reading treats Venus as softened, not rescued.</p>
+
+    <h3>Yogas</h3>
+    <div class="table-wrap">
+        <table>
+            <caption>Notable combinations</caption>
+            <thead>
+                <tr>
+                    <th>Yoga</th>
+                    <th>Basis</th>
+                    <th>Strength</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Budhaditya</td><td>Sun and Mercury in Leo, 1st</td><td>Mild</td></tr>
+                <tr><td>Raja yoga</td><td>Mars (4th/9th lord) and Jupiter (5th/8th lord) in the 12th</td><td>Mixed — Mars is weak</td></tr>
+                <tr><td>Sakata</td><td>Moon in the 6th from Jupiter</td><td>Present</td></tr>
+                <tr><td>Amala</td><td>Venus in the 10th from the Moon</td><td>Nominal — Venus is debilitated</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Method</h3>
+    <p>Swiss Ephemeris 2.10.03 with DE441 files, Lahiri ayanamsa, and whole-sign houses; XALEN WASM 0.7.0 for the divisional charts and Vimshottari dasha; Julian Day 2452504.5416667. The report and the independent calculation agree to the arcsecond; the interpretive layer is marked with confidence labels throughout.</p>
+</section>
+
+<div class="moon-phases" aria-hidden="true">
+    <span class="phase new"></span>
+    <span class="phase crescent"></span>
+    <span class="phase quarter"></span>
+    <span class="phase gibbous current"></span>
+    <span class="phase full"></span>
+</div>
+
+<footer>
+    <p><strong>Provenance.</strong> Swiss Ephemeris 2.10.03 · XALEN WASM 0.7.0 · Lahiri ayanamsa · whole-sign houses · Julian Day 2452504.5416667 · 18 August 2002, 06:30 IST, Razole, Andhra Pradesh.</p>
+    <p><strong>Image.</strong> Moon photograph: Gregory H. Revera / Wikimedia Commons, CC BY-SA 3.0. The solar system is drawn in CSS.</p>
+    <p><strong>A note on use.</strong> This is a symbolic reading, not a prediction. Nothing here is medical, legal, financial, or fertility advice.</p>
+</footer>
+
+</div>
+</body>
+</html>
